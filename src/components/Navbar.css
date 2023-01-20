@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 20px 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #0290ff;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+li a {
+  color: #121212;
+  padding: 0 10px;
+}
