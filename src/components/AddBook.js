@@ -10,7 +10,6 @@ const AddBook = () => {
     e.preventDefault();
     const [title, author] = e.target;
     dispatch(addBook({ title: title.value, author: author.value, id: uuidv4() }));
-    console.log({ title: title.value, author: author.value, id: uuidv4() });
     title.value = '';
     author.value = '';
   };
