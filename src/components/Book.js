@@ -12,9 +12,7 @@ const Book = (props) => {
 
   const { title, author, id } = props;
   const dispatch = useDispatch();
-
   const handleRemove = () => {
-    console.log(id);
     dispatch(removeBook(id));
   };
 

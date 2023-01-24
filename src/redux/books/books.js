@@ -20,12 +20,14 @@ const booksReducer = (state = initialState, action) => {
   }
 };
 
-const addBook = () => ({
+const addBook = (payload) => ({
   type: BOOK_ADDED,
+  payload,
 });
 
-const removeBook = () => ({
+const removeBook = (id) => ({
   type: BOOK_REMOVED,
+  payload: { id },
 });
 
 export { addBook, removeBook };
