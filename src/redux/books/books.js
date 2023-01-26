@@ -5,7 +5,7 @@ const BOOK_REMOVED = 'bookstore/books/BOOK_REMOVED';
 const GET_BOOK = 'bookstore/books/GET_BOOK';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
-const appId = 'A5M1SMeOFloqjitxesLY';
+const appId = 'fl3dvWeSoMBunu6dAXjO';
 
 const initialState = [];
 

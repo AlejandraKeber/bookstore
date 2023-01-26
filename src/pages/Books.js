@@ -14,7 +14,7 @@ const Books = () => {
             id={book.item_id}
             title={book.title}
             author={book.author}
-            categorie={book.categorie}
+            category={book.category}
           />
         ))}
       </ul>
