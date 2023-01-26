@@ -50,14 +50,21 @@ const addBook = (payload) => (dispatch) => {
     },
     body: JSON.stringify(payload),
   })
-    .then((response) => response.text())
     .then(() => dispatch({ type: BOOK_ADDED, payload }));
 };
 
-const removeBook = (id) => ({
-  type: BOOK_REMOVED,
-  payload: id,
-});
+const removeBook = (payload) => (dispatch) => {
+  fetch(`${url}/apps/${appId}/books/${payload}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: payload,
+    }),
+  })
+    .then(() => dispatch({ type: BOOK_REMOVED, payload }));
+};
 
 export { getBook, addBook, removeBook };
 export default booksReducer;
