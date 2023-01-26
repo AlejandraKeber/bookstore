@@ -1,13 +1,14 @@
 const BOOK_ADDED = 'bookstore/books/BOOK_ADDED';
 const BOOK_REMOVED = 'bookstore/books/BOOK_REMOVED';
+const GET_BOOK = 'bookstore/books/GET_BOOK';
 
-const initialState = [
-  { title: 'The Hunger Games', author: 'Suzanne Collins', id: '1' },
-  { title: 'Dune', author: 'Frank Herbert', id: '2' },
-  { title: 'Capital in the Twenty-First Century', author: 'Suzanne Collins', id: '3' },
-];
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
+const appId = 'AlJtrlZysZfqcW8ZFnBI';
+
+const initialState = [];
 
 const booksReducer = (state = initialState, action) => {
+  const list = [];
   switch (action.type) {
     case BOOK_ADDED:
       return [...state, action.payload];
@@ -15,9 +16,30 @@ const booksReducer = (state = initialState, action) => {
     case BOOK_REMOVED:
       return state.filter((book) => book.id !== action.payload);
 
+    case GET_BOOK:
+      Object.keys(action.payload).forEach((element) => {
+        const book = action.payload[element][0];
+        book.item_id = element;
+        list.push(book);
+      });
+      return list;
+
     default:
       return state;
   }
+};
+
+const getBook = () => (dispatch) => {
+  fetch(`${url}/apps/${appId}/books/`, {
+    method: 'GET',
+    headers: {
+      'Content-type': 'application/json',
+    },
+  })
+    .then((res) => res.json())
+    .then(
+      (data) => dispatch({ type: GET_BOOK, payload: data }),
+    );
 };
 
 const addBook = (payload) => ({
@@ -30,5 +52,5 @@ const removeBook = (id) => ({
   payload: id,
 });
 
-export { addBook, removeBook };
+export { getBook, addBook, removeBook };
 export default booksReducer;
