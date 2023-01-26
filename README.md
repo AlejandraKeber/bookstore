@@ -122,10 +122,6 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[Use Redux in React Components]**
-- [ ] **[Connect to API]**
 - [ ] **[Test the app]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -144,9 +140,7 @@ Feel free to check the [issues page](https://github.com/AlejandraKeber/bookstore
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project please give an star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

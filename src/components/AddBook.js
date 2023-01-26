@@ -9,7 +9,7 @@ const AddBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const [title, author] = e.target;
-    dispatch(addBook({ title: title.value, author: author.value, id: uuidv4() }));
+    dispatch(addBook({ title: title.value, author: author.value, item_id: uuidv4() }));
     title.value = '';
     author.value = '';
   };
