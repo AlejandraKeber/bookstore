@@ -42,10 +42,17 @@ const getBook = () => (dispatch) => {
     );
 };
 
-const addBook = (payload) => ({
-  type: BOOK_ADDED,
-  payload,
-});
+const addBook = (payload) => (dispatch) => {
+  fetch(`${url}/apps/${appId}/books/`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.text())
+    .then(() => dispatch({ type: BOOK_ADDED, payload }));
+};
 
 const removeBook = (id) => ({
   type: BOOK_REMOVED,
