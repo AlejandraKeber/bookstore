@@ -7,7 +7,7 @@ const Books = () => {
   const books = useSelector((state) => state.books);
   return (
     <div className="container">
-      <ul className="book-list">
+      <ul className="book-list" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         { books.map((book) => (
           <Book
             key={book.item_id}
