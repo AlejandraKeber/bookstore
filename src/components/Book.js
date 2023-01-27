@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 import './Book.css';
+import progress from '../images/progress.svg';
 
 const Book = (props) => {
   Book.propTypes = {
@@ -37,6 +38,7 @@ const Book = (props) => {
                 </div>
               </div>
               <div className="progress-container">
+                <img src={progress} alt="progress" />
                 <div className="progress-info">
                   <p className="progress-percent">64%</p>
                   <p className="progress-status">Completed</p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import user from '../images/user.svg';
 
 const Navbar = () => (
   <header>
@@ -16,7 +17,7 @@ const Navbar = () => (
       </ul>
     </nav>
     <div className="nav-user">
-      <p>user</p>
+      <img src={user} alt="user" />
     </div>
   </header>
 );
