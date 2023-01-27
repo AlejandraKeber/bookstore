@@ -22,16 +22,20 @@ h1 {
 }
 
 .nav-links {
-  display: flex;
-  flex-grow: 1;
-  list-style-type: none;
-  grid-gap: 40px;
-  gap: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
   letter-spacing: 1.9px;
 }
 
 a {
+  opacity: 0.5;
   text-decoration: none;
+}
+
+a.active {
+  opacity: 1;
+  color: #121212;
 }
 
 .nav-user {
