@@ -1,0 +1,138 @@
+.books {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 8px;
+  margin-right: 40px;
+}
+
+.book-info {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 30px;
+  gap: 45px;
+}
+
+.book-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-category {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 2px;
+}
+
+.book-title {
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  font-family: "Roboto Slab", serif;
+  color: #121212;
+  margin: 2px;
+}
+
+.book-author {
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #4386bf;
+  font-family: "Roboto Slab", serif;
+  margin: 2px;
+}
+
+.book-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.313rem;
+  font-family: "Roboto Slab", serif;
+}
+
+.book-button > button {
+  all: unset;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  cursor: pointer;
+  padding: 0 0.938rem;
+  border-left: solid 1px #e8e8e8;
+}
+
+.book-button > button:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.progress-container {
+  font-family: 'Montserrat', sans-serif;
+  align-self: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.313rem;
+  border-right: solid 1px #e8e8e8;
+  padding-right: 150px;
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-percent {
+  font-size: 2rem;
+  letter-spacing: normal;
+  margin: 1px;
+  color: #121212;
+}
+
+.progress-status {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  margin: 1px;
+}
+
+.chapter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: flex-end;
+}
+
+.current-chapter {
+  font-family: "Roboto Slab", serif;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+}
+
+.chapter {
+  font-family: "Roboto Slab", serif;
+  margin-top: 0.438rem;
+  margin-bottom: 1.438rem;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.chapter-button {
+  width: 11.5rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
