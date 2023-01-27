@@ -40,7 +40,7 @@ const Book = (props) => {
               <div className="progress-container">
                 <img src={progress} alt="progress" />
                 <div className="progress-info">
-                  <p className="progress-percent">64%</p>
+                  <p className="progress-percent">73%</p>
                   <p className="progress-status">Completed</p>
                 </div>
               </div>
